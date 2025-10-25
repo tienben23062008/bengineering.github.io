@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thẻ Thông Tin Trận Đấu</title>
+    <title>Thẻ Thông Tin Training</title>
     <style>
         /*
         *********************************************
-        * PHẦN CSS - Định dạng giao diện
+        * PHẦN CSS - Định dạng giao diện (Không cần sửa)
         *********************************************
         */
         body {
@@ -16,80 +16,64 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #f4f4f9; /* Màu nền trang web */
+            background-color: #f4f4f9; 
             font-family: sans-serif;
         }
 
-        .match-card {
-            width: 300px; /* Chiều rộng của thẻ */
-            background-color: #1e2448; /* Màu nền tối của thẻ */
+        .training-card {
+            width: 300px; 
+            background-color: white; 
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            color: white;
-            overflow: hidden; /* Đảm bảo các góc bo tròn */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+            overflow: hidden;
         }
 
-        /* Phần tiêu đề/logo đội */
-        .header-match {
+        /* Phần Tiêu đề/Hình ảnh */
+        .header-image {
+            background-color: #7d5fff; /* Màu tím đậm */
+            padding: 20px;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            padding: 30px 20px;
-            text-align: center;
+            height: 150px; 
+            position: relative;
         }
 
-        .team-logo {
-            flex-basis: 35%; /* Tỉ lệ chiều rộng cho logo */
-        }
-
-        .team-logo img {
-            width: 60px; /* Kích thước logo */
-            height: 60px;
+        .header-image img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
             object-fit: contain;
         }
 
-        .team-name {
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .separator-logo {
-            flex-basis: 30%; /* Tỉ lệ chiều rộng cho khoảng cách giữa 2 đội */
-            font-size: 30px;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.2); /* Màu mờ cho logo giữa */
-        }
-        
-        /* Phần nội dung chi tiết */
-        .match-details {
-            background-color: white; /* Màu nền trắng cho phần dưới */
-            color: #333;
+        /* Phần Nội dung chi tiết */
+        .training-details {
             padding: 20px;
         }
 
         .competition-title {
-            color: #4a4a4a;
+            color: #777;
             font-size: 12px;
             margin-bottom: 5px;
         }
 
-        .match-name {
-            font-size: 18px;
+        .event-title {
+            font-size: 24px;
             font-weight: bold;
-            line-height: 1.2;
             margin-bottom: 5px;
         }
 
-        .match-round {
+        .event-subtitle {
             font-size: 16px;
             font-weight: 500;
+            color: #4a4a4a;
             margin-bottom: 20px;
         }
 
         .info-row {
             display: flex;
-            align-items: center;
+            align-items: flex-start; 
             margin-bottom: 15px;
             font-size: 14px;
             color: #333;
@@ -97,67 +81,35 @@
 
         .info-row span {
             margin-left: 10px;
+            line-height: 1.4;
         }
 
         .icon {
-            width: 16px;
-            height: 16px;
-            /* Thay thế bằng icon thực tế (ví dụ: Font Awesome)
-               Hoặc sử dụng ký tự unicode */
-        }
-
-        .more-link {
-            padding-top: 10px;
-            border-top: 1px solid #eee;
-            margin-top: 10px;
-        }
-
-        .more-link a {
-            color: #7d5fff; /* Màu tím cho liên kết "More" */
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-        
-        .dots {
-            font-size: 20px;
-            line-height: 10px;
-            margin-right: 5px;
+            font-size: 16px;
+            color: #7d5fff; /* Màu tím cho Icon */
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0; 
         }
     </style>
 </head>
 <body>
 
-    <div class="match-card">
+    <div class="training-card">
         
-        <div class="header-match">
-            <div class="team-logo">
-                <img src="https://1drv.ms/i/c/01570e5594d94440/ESGYXbgHypJCtD4FBu4svnUBKCAvtsaFWaVKvzdvAlbbwA?e=yuGsb9" alt="">
-                <div class="team-name"></div>
-            </div>
-
-            <div class="separator-logo">
-                u 
-            </div>
-
-            <div class="team-logo">
-                <img src="" alt="">
-                <div class="team-name"></div>
-            </div>
+        <div class="header-image">
+            <img src="https://1drv.ms/i/c/01570e5594d94440/ESGYXbgHypJCtD4FBu4svnUBKCAvtsaFWaVKvzdvAlbbwA?e=fbYuKl" alt="Poster">
         </div>
 
-        <div class="match-details">
+        <div class="training-details">
             <div class="competition-title"></div>
-            <div class="match-name">Workshop</div>
-            <div class="match-round"></div>
+            <div class="event-title">Workshop</div>
+            <div class="event-subtitle">Công nghệ in 3D</div>
             
-            <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0 15px 0;">
-
+            
             <div class="info-row">
                 <span class="icon" aria-label="Lịch">&#128197;</span> 
-                <span>Chủ nhật, 26-10, 8h30</span>
+                <span>Chủ nhật, 26-10-2025, 08:30</span>
             </div>
 
             <div class="info-row">
@@ -165,10 +117,9 @@
                 <span>THPT Nguyễn Hữu Huân, Phòng 1.01</span>
             </div>
 
-            <div class="more-link">
-                <a href="#">
-                    <span class="dots">...</span> More
-                </a>
+            <div class="info-row">
+                 <span class="icon" aria-label="TV">&#128250;</span> 
+                <span></span>
             </div>
 
         </div>
