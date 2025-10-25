@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thẻ Thông Tin Trận Đấu</title>
+    <style>
+        /*
+        *********************************************
+        * PHẦN CSS - Định dạng giao diện
+        *********************************************
+        */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9; /* Màu nền trang web */
+            font-family: sans-serif;
+        }
+
+        .match-card {
+            width: 300px; /* Chiều rộng của thẻ */
+            background-color: #1e2448; /* Màu nền tối của thẻ */
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+            overflow: hidden; /* Đảm bảo các góc bo tròn */
+        }
+
+        /* Phần tiêu đề/logo đội */
+        .header-match {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .team-logo {
+            flex-basis: 35%; /* Tỉ lệ chiều rộng cho logo */
+        }
+
+        .team-logo img {
+            width: 60px; /* Kích thước logo */
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .team-name {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .separator-logo {
+            flex-basis: 30%; /* Tỉ lệ chiều rộng cho khoảng cách giữa 2 đội */
+            font-size: 30px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.2); /* Màu mờ cho logo giữa */
+        }
+        
+        /* Phần nội dung chi tiết */
+        .match-details {
+            background-color: white; /* Màu nền trắng cho phần dưới */
+            color: #333;
+            padding: 20px;
+        }
+
+        .competition-title {
+            color: #4a4a4a;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .match-name {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .match-round {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-row span {
+            margin-left: 10px;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            /* Thay thế bằng icon thực tế (ví dụ: Font Awesome)
+               Hoặc sử dụng ký tự unicode */
+        }
+
+        .more-link {
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        .more-link a {
+            color: #7d5fff; /* Màu tím cho liên kết "More" */
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .dots {
+            font-size: 20px;
+            line-height: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="match-card">
+        
+        <div class="header-match">
+            <div class="team-logo">
+                <img src="https://via.placeholder.com/60x60?text=RM" alt="Logo Real Madrid">
+                <div class="team-name">Real Madrid</div>
+            </div>
+
+            <div class="separator-logo">
+                u 
+            </div>
+
+            <div class="team-logo">
+                <img src="https://via.placeholder.com/60x60?text=FCB" alt="Logo Barcelona">
+                <div class="team-name">Barcelona</div>
+            </div>
+        </div>
+
+        <div class="match-details">
+            <div class="competition-title">Football - First Team</div>
+            <div class="match-name">La Liga</div>
+            <div class="match-round">Matchday 10</div>
+            
+            <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0 15px 0;">
+
+            <div class="info-row">
+                <span class="icon" aria-label="Lịch">&#128197;</span> 
+                <span>Sunday, Oct 26, 4:15 PM h</span>
+            </div>
+
+            <div class="info-row">
+                 <span class="icon" aria-label="Địa điểm">&#128205;</span> 
+                <span>Estadio Santiago Bernabéu</span>
+            </div>
+
+            <div class="more-link">
+                <a href="#">
+                    <span class="dots">...</span> More
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
